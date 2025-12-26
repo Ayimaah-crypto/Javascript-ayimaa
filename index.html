@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
+
 <body>
-    <h1 classname="">People Counted</h1>
-    <h2 id="count-el">0</h2>
-    <button id="increment-btn" onclick="increment()" >INCREMENT</button>
-    <button id="save-btn" onclick="save()">SAVE</button>
+    <h1 class="text-5xl text-center">People Counted</h1>
+    <h2 class="text-4xl text-center" id="count-el">0</h2>
+    <div class="flex justify-center space-x-5">
+        <button class="border-2 p-2 border-black bg-yellow-300 rounded-md justify-center " id="increment-btn"
+            onclick="increment()">INCREMENT</button>
+        <button class="border-2 p-2 border-black bg-yellow-300 rounded-md justify-center" id="save-btn"
+            onclick="save()">SAVE</button>
+    </div>
     <script src="index.js"></script>
 </body>
+
 </html>
