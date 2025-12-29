@@ -90,8 +90,11 @@
 // my achievemnet
 let countEl = document.getElementById("count-el")
 let saveEl = document.getElementById("save-el")
+let totalEl = document.getElementById("total-el")
 
 let count = 0 
+let entries = []
+
 function increment() {
     count = count + 1 
     countEl.innerText = count
@@ -101,7 +104,14 @@ increment()
 
 
 function save() {
-   saveEl.innerText += " " + count * 2 
-   console.log()
+    entries.push(count * 2)
+    saveEl.innerText = "people entries:" + entries.join(" ")
+   
 }
 save()
+
+function total() {
+    let sum = entries.reduce((acc,num) => acc + num , 0)
+    totalEl.innerText = "total:" + sum
+    console.log( "Total", sum)
+}
