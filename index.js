@@ -88,30 +88,61 @@
 // }
 
 // my achievemnet
-let countEl = document.getElementById("count-el")
+// let countEl = document.getElementById("count-el")
+// let saveEl = document.getElementById("save-el")
+// let totalEl = document.getElementById("total-el")
+
+// let count = 0 
+// let entries = []
+
+// function increment() {
+//     count = count + 1 
+//     countEl.innerText = count
+//     console.log()
+// }
+// increment()
+
+
+// function save() {
+//     entries.push(count * 2)
+//     saveEl.innerText = "people entries:" + entries.join(" ")
+   
+// }
+// save()
+
+// function total() {
+//     let sum = entries.reduce((acc,num) => acc + num , 0)
+//     totalEl.innerText = "total:" + sum
+//     console.log( "Total", sum)
+// }
+
+// scrimba
+
+let countEL = document.getElementById("count-el")
 let saveEl = document.getElementById("save-el")
 let totalEl = document.getElementById("total-el")
 
 let count = 0 
-let entries = []
+let entries = [] 
 
 function increment() {
-    count = count + 1 
-    countEl.innerText = count
-    console.log()
+    count += 1
+    countEL.innerText = count
 }
 increment()
 
-
 function save() {
-    entries.push(count * 2)
-    saveEl.innerText = "people entries:" + entries.join(" ")
-   
+    let countStr = count + " - "
+    // textContent, helps display our content properly, than innerText does
+    saveEl.textContent += countStr
+    entries.push(count)
+
+     count = 0 
+    countEL.textContent = count
 }
 save()
 
 function total() {
-    let sum = entries.reduce((acc,num) => acc + num , 0)
-    totalEl.innerText = "total:" + sum
-    console.log( "Total", sum)
+  let sum = entries.reduce((acc, num) => acc + num, 0 )
+  totalEl.innerText += "=" + sum
 }
